@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- استخدام الإصدار الأحدث من html2pdf -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <script>
@@ -60,35 +61,29 @@
         .ai-chat-bubble.brand { border-color: #0d9488; background: rgba(13, 148, 136, 0.1); color: #2dd4bf; }
         .ai-chat-bubble.danger { border-color: #ef4444; background: rgba(239, 68, 68, 0.1); color: #fca5a5; }
 
-        /* Print Settings */
-        @media print {
-            body { background-color: white !important; color: black !important; font-size: 11pt; }
-            .glass-card { background: white !important; border: 1px solid #cbd5e1 !important; break-inside: avoid; box-shadow: none !important; page-break-inside: avoid;}
-            .no-print { display: none !important; }
-            .text-gradient { background: none !important; -webkit-text-fill-color: black !important; color: #0d9488 !important; font-weight: bold; }
-            .mockup-content { background: #f1f5f9 !important; color: #000 !important; }
-            .mockup-ai { background: #fff !important; }
-            .ai-chat-bubble { background: #f8fafc !important; color: #000 !important; border-color: #cbd5e1 !important; }
-            * { text-shadow: none !important; }
-            .page-break { page-break-before: always; }
+        /* Print Settings for PDF Generation */
+        .pdf-mode {
+            background-color: #0f172a !important; /* Force dark bg for PDF */
         }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white pb-32">
 
-    <div class="fixed inset-0 z-[-1] overflow-hidden no-print">
+    <!-- data-html2canvas-ignore="true" يمنع الشاشة السوداء في الـ PDF -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden no-print" data-html2canvas-ignore="true">
         <div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] rounded-full bg-brand-900/20 blur-[120px]"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[150px]"></div>
     </div>
 
-    <div id="pitch-document" class="max-w-5xl mx-auto pt-12 px-4 sm:px-6 lg:px-8">
+    <!-- حاوية الـ PDF -->
+    <div id="pitch-document" class="max-w-5xl mx-auto pt-12 px-4 sm:px-6 lg:px-8 bg-dark-bg">
         
         <!-- Header -->
-        <header class="text-center mb-12 relative">
+        <header class="text-center mb-12 relative avoid-break">
             <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold tracking-wide">
                 <i class="fa-solid fa-globe mr-1"></i> GLOBAL HYPER-SCALE ARCHITECTURE | 2026
             </div>
-            <h1 class="text-4xl md:text-5xl font-heading font-extrabold mb-4 leading-tight">
+            <h1 class="text-4xl md:text-5xl font-heading font-extrabold mb-4 leading-tight text-white">
                 منصة <span class="text-gradient">Contract Intelligence SaaS</span>
             </h1>
             <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
@@ -102,7 +97,7 @@
         </header>
 
         <!-- UI Concept -->
-        <section class="mb-12 page-break">
+        <section class="mb-12 avoid-break">
             <h2 class="text-xl font-bold font-heading mb-4 flex items-center gap-2 text-white">
                 <i class="fa-solid fa-desktop text-brand-400"></i> 1. تصور واجهة المنصة (The Dashboard UI)
             </h2>
@@ -150,7 +145,7 @@
                             <i class="fa-solid fa-wand-magic-sparkles mb-1"></i> <strong>الإجراء المقترح (Action):</strong>
                             <br>هل أقوم بصياغة رسالة بريد إلكتروني باللغة الإنجليزية للطرف الثاني لطلب تعديل البند ليتوافق مع قوانين الشراكة السعودية (PDPL) وفترة الـ 30 يوماً؟
                         </div>
-                        <div class="mt-auto relative">
+                        <div class="mt-auto relative" data-html2canvas-ignore="true">
                             <input type="text" placeholder="اطلب من الذكاء الاصطناعي أي تعديل..." class="w-full bg-dark-bg border border-dark-border rounded-lg pl-10 pr-3 py-2.5 text-xs text-white placeholder-slate-500 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
                             <div class="absolute left-1.5 top-1.5 bg-brand-500 text-white w-7 h-7 rounded flex items-center justify-center cursor-pointer hover:bg-brand-400 transition-colors">
                                 <i class="fa-solid fa-arrow-up text-xs"></i>
@@ -163,7 +158,7 @@
         </section>
 
         <!-- Global Architecture & Millions of Users -->
-        <section class="mb-10 page-break">
+        <section class="mb-10 avoid-break mt-10">
             <h3 class="text-xl font-bold font-heading mb-6 flex items-center gap-2 text-white border-b border-dark-border pb-3"><i class="fa-solid fa-earth-americas text-blue-400"></i> 2. معمارية التوسع العالمي (Hyper-Scaling to Millions)</h3>
             <div class="bg-dark-card border border-dark-border rounded-xl p-6">
                 <p class="text-slate-300 text-sm leading-relaxed mb-6">
@@ -190,9 +185,9 @@
         </section>
 
         <!-- Tech Stack & Architecture -->
-        <div class="grid md:grid-cols-2 gap-6 mb-8 page-break">
+        <div class="grid md:grid-cols-2 gap-6 mb-8 mt-10">
             <!-- Unfair Advantage -->
-            <section class="glass-card rounded-2xl p-6 glow-border">
+            <section class="glass-card rounded-2xl p-6 glow-border avoid-break">
                 <div class="flex items-center gap-3 mb-4 border-b border-dark-border pb-3">
                     <div class="bg-red-500/20 p-2 rounded-lg"><i class="fa-solid fa-crosshairs text-red-400"></i></div>
                     <h3 class="text-xl font-bold font-heading text-white">3. لماذا سنسحق المنافسين؟</h3>
@@ -214,20 +209,20 @@
             </section>
 
             <!-- Tech Stack -->
-            <section class="glass-card rounded-2xl p-6 glow-border">
+            <section class="glass-card rounded-2xl p-6 glow-border avoid-break">
                 <div class="flex items-center gap-3 mb-4 border-b border-dark-border pb-3">
                     <div class="bg-purple-500/20 p-2 rounded-lg"><i class="fa-solid fa-microchip text-purple-400"></i></div>
-                    <h3 class="text-xl font-bold font-heading text-white">4. تقنيات الذكاء الاصطناعي (تحديثات 2026)</h3>
+                    <h3 class="text-xl font-bold font-heading text-white">4. تقنيات الذكاء الاصطناعي (مايو 2026)</h3>
                 </div>
                 <p class="text-slate-300 text-xs mb-3">النظام اللغوي (LLM) ليس أداة واحدة، بل "خط تجميع" متكامل:</p>
                 <div class="space-y-3">
                     <div>
-                        <div class="text-xs text-brand-400 font-bold mb-1 uppercase tracking-wider">Gemini 3.5 Flash (جديد - للسرعة)</div>
+                        <div class="text-xs text-brand-400 font-bold mb-1 uppercase tracking-wider">Gemini 3.5 Flash (أحدث إصدار - للسرعة)</div>
                         <div class="text-xs text-slate-300 bg-dark-bg p-2 rounded border border-dark-border">يقوم بعمليات فرز العقد واستخراج التواريخ في أجزاء من الثانية بتكلفة شبه مجانية.</div>
                     </div>
                     <div>
                         <div class="text-xs text-brand-400 font-bold mb-1 uppercase tracking-wider">Gemini 3.1 Pro (للتفكير المعقد)</div>
-                        <div class="text-xs text-slate-300 bg-dark-bg p-2 rounded border border-dark-border">مخصص للمحاكمة القانونية، اكتشاف الثغرات العميقة، وفهم نصوص التحكيم التجاري الطويلة جداً (حتى 2 مليون Token).</div>
+                        <div class="text-xs text-slate-300 bg-dark-bg p-2 rounded border border-dark-border">مخصص للمحاكمة القانونية، اكتشاف الثغرات العميقة، وفهم نصوص التحكيم التجاري الطويلة جداً.</div>
                     </div>
                     <div>
                         <div class="text-xs text-brand-400 font-bold mb-1 uppercase tracking-wider">Vector Search & RAG</div>
@@ -238,7 +233,7 @@
         </div>
 
         <!-- Strategy & Costs -->
-        <section class="glass-card rounded-2xl p-6 mb-8 glow-border page-break">
+        <section class="glass-card rounded-2xl p-6 mb-8 glow-border avoid-break mt-10">
             <h3 class="text-xl font-bold font-heading mb-6 flex items-center gap-2 text-white border-b border-dark-border pb-3"><i class="fa-solid fa-rocket text-brand-400"></i> 5. استراتيجية الإطلاق وحماية الميزانية</h3>
             
             <div class="grid md:grid-cols-2 gap-8">
@@ -256,8 +251,8 @@
                     </ul>
                     
                     <div class="mt-4 p-3 border border-blue-500/30 rounded bg-blue-900/10">
-                        <h4 class="font-bold text-blue-300 mb-1 text-xs"><i class="fa-solid fa-lock text-blue-400"></i> النسخة الثانية (V2) - التوسع لشركات الـ Enterprise:</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">المميزات المؤسسية المعقدة (مثل: مقارنة 5 عقود في وقت واحد، الصياغة التلقائية للعقود، التدريب المخصص Private Models، والتكامل مع DocuSign) سيتم الاتفاق عليها في مرحلة ثانية، <strong>ويتم تمويلها من أرباح النسخة الأولى</strong> لضمان أعلى ROI.</p>
+                        <h4 class="font-bold text-blue-300 mb-1 text-xs"><i class="fa-solid fa-lock text-blue-400"></i> النسخة الثانية (V2) - للتوسع مستقبلاً:</h4>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">المميزات المؤسسية المعقدة (مثل: مقارنة 5 عقود، الصياغة التلقائية، والتكامل مع DocuSign) سيتم إضافتها في مرحلة ثانية <strong>ويتم تمويلها من أرباح النسخة الأولى</strong> لحماية الميزانية.</p>
                     </div>
                 </div>
 
@@ -266,7 +261,7 @@
                     <div>
                         <h4 class="font-bold text-white mb-3 text-sm flex items-center gap-2"><i class="fa-solid fa-chart-line text-green-400"></i> التكاليف التشغيلية (OPEX)</h4>
                         <div class="bg-dark-bg p-4 rounded text-sm text-slate-300 border border-dark-border">
-                            <p class="text-xs text-slate-400 mb-3 leading-relaxed">بفضل معمارية الـ Serverless واستخدامنا لـ Gemini 3.5 Flash للعمليات المتكررة، ستكون تكاليف الاستضافة و الـ API للذكاء الاصطناعي شبه معدومة في البداية:</p>
+                            <p class="text-xs text-slate-400 mb-3 leading-relaxed">بفضل معمارية الـ Serverless واستخدامنا لـ Gemini 3.5 Flash للعمليات المتكررة، ستكون تكاليف الاستضافة و الـ API شبه معدومة في البداية:</p>
                             <div class="flex items-center justify-between border-t border-slate-700 pt-3">
                                 <span class="text-sm">أول 3 أشهر (حتى 100 شركة عميلة):</span>
                                 <strong class="text-green-400 bg-green-400/10 px-2 py-1 rounded border border-green-400/20">$50 - $150 / شهرياً فقط</strong>
@@ -281,12 +276,12 @@
     </div>
 
     <!-- Call to Action -->
-    <div class="fixed bottom-0 left-0 right-0 bg-dark-bg/95 backdrop-blur-md border-t border-dark-border p-4 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] z-50 no-print">
+    <div class="fixed bottom-0 left-0 right-0 bg-dark-bg/95 backdrop-blur-md border-t border-dark-border p-4 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] z-50 no-print" data-html2canvas-ignore="true">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
                 <p class="text-white font-bold flex items-center gap-2">
                     <span class="bg-brand-500/20 text-brand-400 px-2 py-1 rounded text-xs border border-brand-500/30">MVP Budget: $8,000</span>
-                    <span class="text-slate-300 text-sm hidden sm:inline">دعنا نناقش هذا التصور عملياً.</span>
+                    <span class="text-slate-300 text-sm hidden sm:inline">هل أنت جاهز لتجربة حية للمحرك ومناقشة التفاصيل؟</span>
                 </p>
             </div>
             <div class="flex gap-3 w-full md:w-auto">
@@ -304,12 +299,24 @@
     <script>
         function downloadPDF() {
             const element = document.getElementById('pitch-document');
+            
+            // Add a class to optimize for PDF
+            element.classList.add('pdf-mode');
+            
+            // إعدادات احترافية تمنع التقطيع وتجبر النظام على مقاس Desktop
             const opt = {
-                margin:       [10, 10, 20, 10],
-                filename:     'Global_Contract_AI_Architecture_Khalid.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#0f172a' },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                margin:       [15, 10, 15, 10], // Margins (Top, Left, Bottom, Right)
+                filename:     'Global_Contract_AI_Architecture_Khalid_Bakhit.pdf',
+                image:        { type: 'jpeg', quality: 1 },
+                html2canvas:  { 
+                    scale: 2, 
+                    useCORS: true, 
+                    backgroundColor: '#0f172a',
+                    windowWidth: 1200 // الأهم: إجبار مقاس الشاشة لترتيب النصوص
+                },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                // منع التقطيع للأقسام المحددة
+                pagebreak:    { mode: ['css', 'legacy'], avoid: ['.avoid-break'] }
             };
             
             const btn = document.querySelector('button');
@@ -318,6 +325,7 @@
             
             html2pdf().set(opt).from(element).save().then(() => {
                 btn.innerHTML = originalText;
+                element.classList.remove('pdf-mode');
             });
         }
     </script>
