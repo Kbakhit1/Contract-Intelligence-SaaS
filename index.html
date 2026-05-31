@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التصور الاستراتيجي والتقني | Contract Intelligence SaaS</title>
+    <title>Global Scalability Blueprint | Contract Intelligence SaaS</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
                     },
                     colors: {
                         brand: { 50: '#f0fdfa', 400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488', 900: '#134e4a' },
-                        dark: { bg: '#0f172a', card: '#1e293b', border: '#334155' }
+                        dark: { bg: '#0f172a', card: '#1e293b', border: '#334155', lighter: '#1e293b' }
                     }
                 }
             }
@@ -30,7 +30,7 @@
     <style>
         body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; }
         .glass-card {
-            background: rgba(30, 41, 59, 0.6);
+            background: rgba(30, 41, 59, 0.7);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(51, 65, 85, 0.8);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -49,15 +49,16 @@
         }
         
         /* CSS for the Mockup UI */
-        .mockup-ui { display: flex; flex-direction: column; height: 400px; border-radius: 12px; overflow: hidden; border: 1px solid #334155; background: #0f172a; }
+        .mockup-ui { display: flex; flex-direction: column; height: 420px; border-radius: 12px; overflow: hidden; border: 1px solid #334155; background: #0f172a; }
         .mockup-header { height: 40px; background: #1e293b; display: flex; align-items: center; padding: 0 16px; border-bottom: 1px solid #334155; gap: 8px;}
         .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
         .mockup-body { display: flex; flex: 1; overflow: hidden; }
         .mockup-sidebar { width: 60px; background: #1e293b; border-left: 1px solid #334155; display: flex; flex-direction: column; align-items: center; padding-top: 16px; gap: 16px; }
-        .mockup-content { flex: 2; padding: 20px; border-left: 1px solid #334155; background: #f8fafc; color: #334155; overflow-y: auto; font-family: monospace; font-size: 12px;}
+        .mockup-content { flex: 2; padding: 24px; border-left: 1px solid #334155; background: #f8fafc; color: #334155; overflow-y: auto; font-family: monospace; font-size: 13px; line-height: 1.6;}
         .mockup-ai { flex: 1; background: #0f172a; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
         .ai-chat-bubble { background: #1e293b; padding: 12px; border-radius: 8px; font-size: 12px; color: #cbd5e1; border: 1px solid #334155; }
         .ai-chat-bubble.brand { border-color: #0d9488; background: rgba(13, 148, 136, 0.1); color: #2dd4bf; }
+        .ai-chat-bubble.danger { border-color: #ef4444; background: rgba(239, 68, 68, 0.1); color: #fca5a5; }
 
         /* Print Settings */
         @media print {
@@ -76,220 +77,225 @@
 <body class="antialiased selection:bg-brand-500 selection:text-white pb-32">
 
     <div class="fixed inset-0 z-[-1] overflow-hidden no-print">
-        <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-brand-900/20 blur-[120px]"></div>
-        <div class="absolute bottom-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-blue-900/20 blur-[120px]"></div>
+        <div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] rounded-full bg-brand-900/20 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[150px]"></div>
     </div>
 
     <div id="pitch-document" class="max-w-5xl mx-auto pt-12 px-4 sm:px-6 lg:px-8">
         
         <!-- Header -->
         <header class="text-center mb-12 relative">
-            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-sm font-semibold tracking-wide">
-                CONFIDENTIAL ARCHITECTURE BLUEPRINT | 2026
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold tracking-wide">
+                <i class="fa-solid fa-globe mr-1"></i> GLOBAL HYPER-SCALE ARCHITECTURE | 2026
             </div>
             <h1 class="text-4xl md:text-5xl font-heading font-extrabold mb-4 leading-tight">
                 منصة <span class="text-gradient">Contract Intelligence SaaS</span>
             </h1>
             <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                مذكرة تقنية واستراتيجية حصرية لإدارة مشروع أستاذ أيمن. مصممة لبناء أصل استثماري رقمي مهيأ للتوسع المؤسسي والاختراق السريع للسوق.
+                مذكرة معمارية أُعدت حصرياً لإدارة مشروع أستاذ أيمن. مصممة لبناء أصل رقمي عالمي (Global Asset) مهيأ لاستيعاب ملايين المستخدمين والامتثال لقوانين البيانات الدولية.
             </p>
-            <div class="mt-4 text-slate-400 text-sm font-semibold">
-                <i class="fa-solid fa-code-branch text-brand-500 ml-1"></i> إعداد المهندس التقني: خالد بخيت
+            <div class="mt-5 flex items-center justify-center gap-4 text-slate-400 text-sm font-semibold">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-microchip text-brand-500"></i> إعداد: م/ خالد بخيت</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-server text-blue-400"></i> CTO & Cloud Solutions Architect</span>
             </div>
         </header>
 
+        <!-- UI Concept -->
         <section class="mb-12 page-break">
-            <h2 class="text-xl font-bold font-heading mb-4 flex items-center gap-2"><i class="fa-solid fa-desktop text-brand-400"></i> تصور مبدئي لواجهة المنصة (UI Concept)</h2>
-            <div class="mockup-ui shadow-2xl">
+            <h2 class="text-xl font-bold font-heading mb-4 flex items-center gap-2 text-white">
+                <i class="fa-solid fa-desktop text-brand-400"></i> 1. تصور واجهة المنصة (The Dashboard UI)
+            </h2>
+            <div class="mockup-ui shadow-2xl border border-dark-border">
                 <div class="mockup-header">
                     <div class="mockup-dot bg-red-500"></div>
                     <div class="mockup-dot bg-yellow-500"></div>
                     <div class="mockup-dot bg-green-500"></div>
-                    <div class="mx-auto text-xs text-slate-400 tracking-widest font-mono">APP.CONTRACT-AI.COM</div>
+                    <div class="mx-auto text-xs text-slate-400 tracking-widest font-mono">GLOBAL.CONTRACT-AI.COM / REVIEW</div>
                 </div>
                 <div class="mockup-body">
                     <div class="mockup-sidebar">
-                        <i class="fa-solid fa-bars text-slate-400"></i>
+                        <i class="fa-solid fa-layer-group text-slate-400 mt-2"></i>
                         <i class="fa-solid fa-file-contract text-brand-400"></i>
-                        <i class="fa-solid fa-chart-pie text-slate-400"></i>
-                        <i class="fa-solid fa-gear text-slate-400"></i>
+                        <i class="fa-solid fa-globe text-slate-400"></i>
+                        <i class="fa-solid fa-gear text-slate-400 mt-auto mb-4"></i>
                     </div>
                     <!-- Fake Contract Area -->
                     <div class="mockup-content" dir="rtl">
-                        <div class="text-center font-bold text-lg mb-4 border-b border-gray-300 pb-2">عقد شراكة تجارية</div>
-                        <p class="mb-2">إنه في يوم الموافق ١٥ مايو ٢٠٢٦، تم الاتفاق بين كل من:</p>
-                        <p class="mb-2">الطرف الأول: شركة الفا للتجارة (ويشار إليها فيما بعد بـ "الشركة")</p>
-                        <p class="mb-4">الطرف الثاني: مؤسسة بيتا للخدمات (ويشار إليها فيما بعد بـ "المورد")</p>
-                        <div class="bg-red-100 border border-red-300 p-2 rounded text-red-800 mb-4 cursor-pointer hover:bg-red-200 transition">
-                            <strong>البند الرابع (الشرط الجزائي):</strong> يحق للطرف الأول فسخ العقد دون إنذار مع تطبيق شرط جزائي قدره 50,000 دولار في حال تأخر التسليم لأكثر من ٣ أيام.
+                        <div class="flex justify-between items-center border-b border-gray-300 pb-3 mb-4">
+                            <span class="font-bold text-lg">International Vendor Agreement (US-KSA)</span>
+                            <span class="text-xs bg-slate-200 text-slate-600 px-2 py-1 rounded">Bilingual • Scanned PDF</span>
                         </div>
-                        <p>البند الخامس: تخضع هذه الاتفاقية لقوانين التحكيم التجاري...</p>
+                        <p class="mb-3 text-slate-500">إنه في يوم الموافق ١٥ مايو ٢٠٢٦، تم الاتفاق بين كل من:</p>
+                        <p class="mb-2"><strong>الطرف الأول:</strong> شركة الفا للتقنية - السعودية</p>
+                        <p class="mb-5"><strong>الطرف الثاني:</strong> مؤسسة بيتا جلوبال - الولايات المتحدة</p>
+                        <div class="bg-red-50 border-r-4 border-red-500 p-3 text-red-900 mb-4 cursor-pointer relative group">
+                            <div class="absolute left-2 top-2 opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-robot text-red-400"></i></div>
+                            <strong>Clause 4 (Penalties & Termination):</strong><br>
+                            In the event of a delay exceeding 7 days, the Second Party reserves the right to immediately terminate the contract and retain 30% of the total project value as non-refundable compensation.
+                        </div>
+                        <p class="text-slate-500">البند الخامس: تخضع هذه الاتفاقية لقوانين التحكيم التجاري المعمول بها...</p>
                     </div>
                     <!-- Fake AI Chat Area -->
                     <div class="mockup-ai">
                         <div class="flex items-center justify-between border-b border-dark-border pb-2 mb-2">
-                            <span class="text-sm font-bold text-white"><i class="fa-solid fa-robot text-brand-400 ml-1"></i> AI Assistant</span>
-                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded">High Risk: 85%</span>
+                            <span class="text-sm font-bold text-white flex items-center gap-2"><i class="fa-solid fa-bolt text-brand-400"></i> Global AI Engine</span>
+                            <span class="text-[10px] bg-red-500/20 text-red-400 border border-red-500/30 px-2 py-0.5 rounded uppercase tracking-wider font-bold">CRITICAL VIOLATION</span>
                         </div>
-                        <div class="ai-chat-bubble">
-                            <strong>تحليل سريع:</strong> هذا العقد يميل بشدة لصالح "الطرف الأول". هناك ثغرة في البند الرابع.
+                        <div class="ai-chat-bubble danger">
+                            <i class="fa-solid fa-triangle-exclamation mb-1"></i> <strong>مخالفة لسياسة شركتك (Company Playbook):</strong>
+                            <br>البند الرابع يمنح المورد الأمريكي حق "الفسخ الفوري". هذا يتعارض مع سياسة المخاطر الخاصة بشركتكم والتي تنص على: (فترة سماح 30 يوماً وتوجيه إنذار خطي قبل الفسخ).
                         </div>
                         <div class="ai-chat-bubble brand">
-                            <i class="fa-solid fa-triangle-exclamation"></i> <strong>خطر قانوني:</strong> الشرط الجزائي (50,000$) في البند الرابع مبالغ فيه ولا يتناسب مع مدة التأخير (3 أيام). ننصح بتعديله إلى نسبة مئوية من قيمة التوريد.
+                            <i class="fa-solid fa-wand-magic-sparkles mb-1"></i> <strong>الإجراء المقترح (Action):</strong>
+                            <br>هل أقوم بصياغة رسالة بريد إلكتروني باللغة الإنجليزية للطرف الثاني لطلب تعديل البند ليتوافق مع قوانين الشراكة السعودية (PDPL) وفترة الـ 30 يوماً؟
                         </div>
                         <div class="mt-auto relative">
-                            <input type="text" placeholder="إسأل العقد أي سؤال..." class="w-full bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500 outline-none focus:border-brand-500">
-                            <i class="fa-solid fa-paper-plane absolute left-3 top-2.5 text-brand-400 text-xs cursor-pointer"></i>
+                            <input type="text" placeholder="اطلب من الذكاء الاصطناعي أي تعديل..." class="w-full bg-dark-bg border border-dark-border rounded-lg pl-10 pr-3 py-2.5 text-xs text-white placeholder-slate-500 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                            <div class="absolute left-1.5 top-1.5 bg-brand-500 text-white w-7 h-7 rounded flex items-center justify-center cursor-pointer hover:bg-brand-400 transition-colors">
+                                <i class="fa-solid fa-arrow-up text-xs"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="text-center text-slate-400 text-sm mt-3 font-semibold">* تصميم أولي يوضح آلية عمل "المراجعة جنباً إلى جنب" مع المستشار الذكي.</p>
+            <p class="text-center text-slate-400 text-xs mt-4"><i class="fa-solid fa-circle-info text-brand-500 mr-1"></i> النظام مجهز لفهم العقود المزدوجة (Bilingual) وربطها بسياسات الشركة الداخلية (Playbook).</p>
         </section>
 
-        <div class="grid md:grid-cols-2 gap-6 mb-8 page-break">
-            
-            <!-- 1. General Vision -->
-            <section class="glass-card rounded-2xl p-6 glow-border">
-                <div class="flex items-center gap-3 mb-4 border-b border-dark-border pb-3">
-                    <div class="bg-brand-500/20 p-2 rounded-lg"><i class="fa-solid fa-eye text-brand-400"></i></div>
-                    <h3 class="text-xl font-bold font-heading">1. الرؤية العامة للمنصة</h3>
-                </div>
-                <p class="text-slate-300 text-sm leading-relaxed mb-3">
-                    بناء منصة <strong>B2B SaaS</strong> تعمل كـ "مستشار قانوني وتجاري آلي" للشركات. المنصة تحول العقود من ملفات جامدة إلى بيانات حية قابلة للاستجواب.
+        <!-- Global Architecture & Millions of Users -->
+        <section class="mb-10 page-break">
+            <h3 class="text-xl font-bold font-heading mb-6 flex items-center gap-2 text-white border-b border-dark-border pb-3"><i class="fa-solid fa-earth-americas text-blue-400"></i> 2. معمارية التوسع العالمي (Hyper-Scaling to Millions)</h3>
+            <div class="bg-dark-card border border-dark-border rounded-xl p-6">
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                    لكي تبني نظاماً يخدم <strong>ملايين المستخدمين حول العالم</strong>، لا يمكنك استخدام استضافة عادية. لقد صممت هذه المعمارية باستخدام <span class="text-brand-400 font-bold">Google Cloud Edge Network</span> لضمان عدم انهيار النظام مهما بلغ حجم الضغط:
                 </p>
-                <div class="bg-dark-bg p-3 rounded-lg border border-dark-border">
-                    <strong class="text-brand-400 text-sm block mb-1">الميزة التنافسية (The Edge):</strong>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        عكس المنافسين الأمريكيين (Ironclad, LinkSquares)، نظامنا مخصص لفهم اللغة العربية والقانون التجاري، ومدمج بالكامل مع <strong>WhatsApp</strong>. يمكن لمدير المبيعات إرسال عقد الـ PDF لواتساب المنصة، واستلام تقرير المخاطر فوراً على هاتفه.
-                    </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="space-y-2">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20 mb-3"><i class="fa-solid fa-network-wired text-blue-400"></i></div>
+                        <h4 class="font-bold text-white text-sm">توزيع عالمي للبيانات (Global CDN)</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">تطبيق الويب سيكون مستضافاً على أطراف الشبكة (Edge Locations) في أمريكا، أوروبا، والشرق الأوسط. هذا يعني أن العميل في السعودية والعميل في أمريكا سيختبران سرعة استجابة فائقة (أقل من 50ms).</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center border border-brand-500/20 mb-3"><i class="fa-solid fa-database text-brand-400"></i></div>
+                        <h4 class="font-bold text-white text-sm">قواعد بيانات لا نهائية (Spanner-Ready)</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">سنبدأ بـ Firebase Firestore للـ MVP لتقليل التكاليف. ولكن المعمارية مصممة للترقية لاحقاً إلى <strong>Google Cloud Spanner</strong> (نفس قاعدة البيانات التي تستخدمها خوادم جوجل) لتتحمل ملايين الحركات المالية في نفس الثانية دون توقف.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20 mb-3"><i class="fa-solid fa-scale-unbalanced text-purple-400"></i></div>
+                        <h4 class="font-bold text-white text-sm">الامتثال لقوانين البيانات (Data Residency)</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">لدخول السوق العالمي ومخاطبة الشركات الكبرى (Enterprise)، يجب توافق النظام مع قوانين <strong>GDPR (أوروبا)</strong> و <strong>PDPL (السعودية)</strong>. بنيتنا السحابية توفر عزل بيانات كل دولة جغرافياً (Data Localization) تلقائياً.</p>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- 2. Technical Architecture -->
+        <!-- Tech Stack & Architecture -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8 page-break">
+            <!-- Unfair Advantage -->
             <section class="glass-card rounded-2xl p-6 glow-border">
                 <div class="flex items-center gap-3 mb-4 border-b border-dark-border pb-3">
-                    <div class="bg-blue-500/20 p-2 rounded-lg"><i class="fa-solid fa-sitemap text-blue-400"></i></div>
-                    <h3 class="text-xl font-bold font-heading">2. المعمارية التقنية (Architecture)</h3>
+                    <div class="bg-red-500/20 p-2 rounded-lg"><i class="fa-solid fa-crosshairs text-red-400"></i></div>
+                    <h3 class="text-xl font-bold font-heading text-white">3. لماذا سنسحق المنافسين؟</h3>
                 </div>
-                <p class="text-slate-300 text-sm leading-relaxed mb-3">
-                    اعتماد معمارية <strong>Serverless (بدون خوادم)</strong> و <strong>Event-Driven</strong> لضمان الأمان، وتقليل التكلفة، ومنع انهيار النظام عند الضغط.
-                </p>
-                <ul class="text-sm text-slate-400 space-y-2">
-                    <li><i class="fa-solid fa-check text-brand-400 ml-1 text-xs"></i> <strong>Multi-Tenant:</strong> عزل تام لبيانات كل شركة (مطلب أساسي لأمان الشركات).</li>
-                    <li><i class="fa-solid fa-check text-brand-400 ml-1 text-xs"></i> <strong>Background Processing:</strong> استخدام طوابير المهام لمعالجة العقود الكبيرة دون تجميد واجهة المستخدم.</li>
-                    <li><i class="fa-solid fa-check text-brand-400 ml-1 text-xs"></i> <strong>Microservices:</strong> فصل واجهة المستخدم عن محرك الذكاء الاصطناعي لمرونة التحديث.</li>
+                <ul class="text-sm text-slate-400 space-y-4">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-400 mt-1 text-xs"></i> 
+                        <div><strong class="text-white block mb-1">حل معضلة العقود المزدوجة:</strong> المنافسون يفشلون عند قراءة جدول به عربي وإنجليزي. نحن نستخدم Google Document AI للحفاظ على هيكل العقد (Semantic Chunking).</div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-400 mt-1 text-xs"></i> 
+                        <div><strong class="text-white block mb-1">دليل السياسات (Playbook Compliance):</strong> النظام لا يكتشف المخاطر العامة فقط، بل يطابق العقد الجديد مع سياسات شركة العميل السرية، ويرفض أي بند يخالفها.</div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check-circle text-green-400 mt-1 text-xs"></i> 
+                        <div><strong class="text-white block mb-1">تكامل الواتساب (Evolution API):</strong> المدير التنفيذي ليس لديه وقت لفتح اللابتوب. يرسل الـ PDF لواتساب النظام، ويستلم تقرير المخاطر فوراً في محادثة. هذه ميزة تبيع نفسها.</div>
+                    </li>
                 </ul>
             </section>
-        </div>
 
-        <div class="grid md:grid-cols-2 gap-6 mb-8 page-break">
-            
-            <!-- 3. Tech Stack -->
+            <!-- Tech Stack -->
             <section class="glass-card rounded-2xl p-6 glow-border">
                 <div class="flex items-center gap-3 mb-4 border-b border-dark-border pb-3">
-                    <div class="bg-purple-500/20 p-2 rounded-lg"><i class="fa-solid fa-layer-group text-purple-400"></i></div>
-                    <h3 class="text-xl font-bold font-heading">3. التقنيات المقترحة (Tech Stack)</h3>
+                    <div class="bg-purple-500/20 p-2 rounded-lg"><i class="fa-solid fa-microchip text-purple-400"></i></div>
+                    <h3 class="text-xl font-bold font-heading text-white">4. تقنيات الذكاء الاصطناعي (تحديثات 2026)</h3>
                 </div>
+                <p class="text-slate-300 text-xs mb-3">النظام اللغوي (LLM) ليس أداة واحدة، بل "خط تجميع" متكامل:</p>
                 <div class="space-y-3">
-                    <div class="flex items-start gap-2">
-                        <span class="text-xs font-bold text-white bg-slate-700 px-2 py-1 rounded w-20 text-center">Frontend</span>
-                        <span class="text-sm text-slate-300">Next.js (React) + TailwindCSS لواجهة سريعة ومتجاوبة.</span>
+                    <div>
+                        <div class="text-xs text-brand-400 font-bold mb-1 uppercase tracking-wider">Gemini 3.5 Flash (جديد - للسرعة)</div>
+                        <div class="text-xs text-slate-300 bg-dark-bg p-2 rounded border border-dark-border">يقوم بعمليات فرز العقد واستخراج التواريخ في أجزاء من الثانية بتكلفة شبه مجانية.</div>
                     </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-xs font-bold text-white bg-slate-700 px-2 py-1 rounded w-20 text-center">Backend</span>
-                        <span class="text-sm text-slate-300">Python (FastAPI) لمحرك الذكاء، و Node.js للعمليات السحابية.</span>
+                    <div>
+                        <div class="text-xs text-brand-400 font-bold mb-1 uppercase tracking-wider">Gemini 3.1 Pro (للتفكير المعقد)</div>
+                        <div class="text-xs text-slate-300 bg-dark-bg p-2 rounded border border-dark-border">مخصص للمحاكمة القانونية، اكتشاف الثغرات العميقة، وفهم نصوص التحكيم التجاري الطويلة جداً (حتى 2 مليون Token).</div>
                     </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-xs font-bold text-white bg-slate-700 px-2 py-1 rounded w-20 text-center">Cloud & DB</span>
-                        <span class="text-sm text-slate-300">Google Cloud Platform (GCP) + Firebase (Firestore/Auth).</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-xs font-bold text-white bg-slate-700 px-2 py-1 rounded w-20 text-center">WhatsApp</span>
-                        <span class="text-sm text-slate-300">Evolution API للربط المباشر والمستقر مع واتساب.</span>
+                    <div>
+                        <div class="text-xs text-brand-400 font-bold mb-1 uppercase tracking-wider">Vector Search & RAG</div>
+                        <div class="text-xs text-slate-300 bg-dark-bg p-2 rounded border border-dark-border">قاعدة بيانات اتجاهية تمنع الذكاء الاصطناعي من "الهلوسة" وتجبره على الإجابة حصرياً من نصوص العقد المرفوع.</div>
                     </div>
                 </div>
-            </section>
-
-            <!-- 4. AI Mechanism -->
-            <section class="glass-card rounded-2xl p-6 glow-border">
-                <div class="flex items-center gap-3 mb-4 border-b border-dark-border pb-3">
-                    <div class="bg-emerald-500/20 p-2 rounded-lg"><i class="fa-solid fa-brain text-emerald-400"></i></div>
-                    <h3 class="text-xl font-bold font-heading">4. آلية الذكاء الاصطناعي (AI Pipeline)</h3>
-                </div>
-                <p class="text-slate-300 text-sm mb-3">لن نستخدم موديل واحد، بل "خط تجميع" مكون من 4 مراحل متطورة (تحديثات 2026):</p>
-                <ol class="list-decimal list-inside text-sm text-slate-400 space-y-1.5 marker:text-brand-400">
-                    <li><strong class="text-white">Document AI (OCR):</strong> من جوجل، لقراءة النصوص الممسوحة ضوئياً والجداول بدقة فائقة.</li>
-                    <li><strong class="text-white">Semantic Chunking:</strong> تقطيع العقد إلى أجزاء دلالية وتحويلها إلى متجهات (Vectors).</li>
-                    <li><strong class="text-white">Gemini 3.5 Flash:</strong> للعمليات السريعة (تصنيف فوري، استخراج أسماء وتواريخ) بتكلفة شبه معدومة.</li>
-                    <li><strong class="text-white">Gemini 3.1 Pro + RAG:</strong> للتفكير القانوني العميق، واستخراج الثغرات، وإدارة الدردشة مع العقد دون أي هلوسة (Hallucination).</li>
-                </ol>
             </section>
         </div>
 
+        <!-- Strategy & Costs -->
         <section class="glass-card rounded-2xl p-6 mb-8 glow-border page-break">
-            <h3 class="text-xl font-bold font-heading mb-6 flex items-center gap-2 border-b border-dark-border pb-3"><i class="fa-solid fa-rocket text-brand-400"></i> التنفيذ، التكلفة، والتوسع</h3>
+            <h3 class="text-xl font-bold font-heading mb-6 flex items-center gap-2 text-white border-b border-dark-border pb-3"><i class="fa-solid fa-rocket text-brand-400"></i> 5. استراتيجية الإطلاق وحماية الميزانية</h3>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- MVP Features -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- V1 vs V2 -->
                 <div>
-                    <h4 class="font-bold text-white mb-3 text-sm flex items-center gap-2"><i class="fa-solid fa-star text-yellow-400"></i> 5. مميزات الـ MVP</h4>
-                    <ul class="text-sm text-slate-400 space-y-2">
-                        <li>- لوحات تحكم منفصلة للشركات.</li>
-                        <li>- رفع عقود PDF/Word وتحليلها.</li>
-                        <li>- استخراج البنود والتواريخ والأطراف آلياً.</li>
-                        <li>- تقييم المخاطر (RAG) بناءً على نوع العقد.</li>
-                        <li>- الدردشة التفاعلية مع العقد.</li>
-                        <li>- وكيل واتساب الذكي الأساسي.</li>
-                        <li>- بوابة الدفع والاشتراكات.</li>
-                    </ul>
-                </div>
-
-                <!-- Timeline & Costs -->
-                <div>
-                    <h4 class="font-bold text-white mb-3 text-sm flex items-center gap-2"><i class="fa-solid fa-clock text-blue-400"></i> 6. المدة / 7. التكلفة التشغيلية</h4>
-                    <div class="bg-dark-bg p-3 rounded text-sm text-slate-300 mb-3 border border-dark-border">
-                        <strong class="text-white block mb-1">مدة التنفيذ (60 إلى 90 يوماً):</strong>
-                        لدينا النواة التقنية (Core Engine) جاهزة، سنقوم بتطويعها لقطاع الأعمال وبناء الواجهات المخصصة.
-                    </div>
-                    <div class="bg-dark-bg p-3 rounded text-sm text-slate-300 border border-dark-border">
-                        <strong class="text-white block mb-1">التكلفة التشغيلية (الاستضافة):</strong>
-                        بفضل الـ Serverless، التكلفة في الأشهر الأولى ستتراوح بين <strong>$0 إلى $50 فقط</strong>. ترتفع التكلفة منطقياً مع زيادة أرباحك وعملائك.
-                    </div>
-                </div>
-
-                <!-- Scalability -->
-                <div>
-                    <h4 class="font-bold text-white mb-3 text-sm flex items-center gap-2"><i class="fa-solid fa-arrow-trend-up text-green-400"></i> 8. قابلية التوسع مستقبلاً</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        النظام مصمم ليقبل التوسع لـ <strong>V2</strong> (والذي سيتم تمويله لاحقاً من أرباح المنصة). التوسع يشمل:
+                    <h4 class="font-bold text-white mb-3 text-sm flex items-center gap-2 bg-dark-bg p-2 rounded border border-dark-border"><i class="fa-solid fa-flag-checkered text-green-400"></i> نطاق العمل: النسخة الأولى (MVP)</h4>
+                    <p class="text-xs text-slate-400 mb-3 leading-relaxed">
+                        ميزانية الـ <strong>8,000$</strong> كافية تماماً لبناء منصة B2B احترافية قابلة للبيع خلال <strong>60 إلى 90 يوماً</strong>. ستشمل:
                     </p>
-                    <ul class="text-sm text-slate-400 space-y-1.5 mt-2">
-                        <li>- المقارنة المتقاطعة (Cross-Doc Analysis) بين 5 عقود.</li>
-                        <li>- الصياغة الآلية للعقود (AI Drafting).</li>
-                        <li>- التدريب المخصص (Fine-Tuning) ببيانات العميل.</li>
-                        <li>- التكامل مع أنظمة الـ ERP و DocuSign.</li>
+                    <ul class="text-sm text-slate-300 space-y-2 mb-4">
+                        <li class="flex gap-2"><i class="fa-solid fa-chevron-left text-brand-500 text-xs mt-1"></i> عزل تام لبيانات الشركات (Multi-Tenant).</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-chevron-left text-brand-500 text-xs mt-1"></i> محرك استخراج المخاطر والبنود (PDF/Word).</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-chevron-left text-brand-500 text-xs mt-1"></i> الدردشة التفاعلية مع العقد (RAG).</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-chevron-left text-brand-500 text-xs mt-1"></i> تكامل واتساب + أنظمة الدفع (Stripe).</li>
                     </ul>
+                    
+                    <div class="mt-4 p-3 border border-blue-500/30 rounded bg-blue-900/10">
+                        <h4 class="font-bold text-blue-300 mb-1 text-xs"><i class="fa-solid fa-lock text-blue-400"></i> النسخة الثانية (V2) - التوسع لشركات الـ Enterprise:</h4>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">المميزات المؤسسية المعقدة (مثل: مقارنة 5 عقود في وقت واحد، الصياغة التلقائية للعقود، التدريب المخصص Private Models، والتكامل مع DocuSign) سيتم الاتفاق عليها في مرحلة ثانية، <strong>ويتم تمويلها من أرباح النسخة الأولى</strong> لضمان أعلى ROI.</p>
+                    </div>
+                </div>
+
+                <!-- Costs -->
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-white mb-3 text-sm flex items-center gap-2"><i class="fa-solid fa-chart-line text-green-400"></i> التكاليف التشغيلية (OPEX)</h4>
+                        <div class="bg-dark-bg p-4 rounded text-sm text-slate-300 border border-dark-border">
+                            <p class="text-xs text-slate-400 mb-3 leading-relaxed">بفضل معمارية الـ Serverless واستخدامنا لـ Gemini 3.5 Flash للعمليات المتكررة، ستكون تكاليف الاستضافة و الـ API للذكاء الاصطناعي شبه معدومة في البداية:</p>
+                            <div class="flex items-center justify-between border-t border-slate-700 pt-3">
+                                <span class="text-sm">أول 3 أشهر (حتى 100 شركة عميلة):</span>
+                                <strong class="text-green-400 bg-green-400/10 px-2 py-1 rounded border border-green-400/20">$50 - $150 / شهرياً فقط</strong>
+                            </div>
+                            <p class="text-[10px] text-slate-500 mt-2">*التكاليف ترتفع أوتوماتيكياً وبشكل منطقي كلما زادت إيراداتك من الاشتراكات.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
     </div>
 
-    <div class="fixed bottom-0 left-0 right-0 bg-dark-bg/90 backdrop-blur-md border-t border-dark-border p-4 shadow-2xl z-50 no-print">
+    <!-- Call to Action -->
+    <div class="fixed bottom-0 left-0 right-0 bg-dark-bg/95 backdrop-blur-md border-t border-dark-border p-4 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] z-50 no-print">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-                <p class="text-white font-bold">الميزانية: <span class="text-brand-400">$8,000</span> | تسليم: <span class="text-brand-400">60-90 يوم</span></p>
-                <p class="text-slate-400 text-xs">دعنا نناقش هذا التصور عملياً في مكالمة سريعة.</p>
+                <p class="text-white font-bold flex items-center gap-2">
+                    <span class="bg-brand-500/20 text-brand-400 px-2 py-1 rounded text-xs border border-brand-500/30">MVP Budget: $8,000</span>
+                    <span class="text-slate-300 text-sm hidden sm:inline">دعنا نناقش هذا التصور عملياً.</span>
+                </p>
             </div>
-            <div class="flex gap-3">
-                <button onclick="downloadPDF()" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-2.5 px-6 rounded-lg transition-colors border border-slate-500 text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-download"></i> حفظ كـ PDF
+            <div class="flex gap-3 w-full md:w-auto">
+                <button onclick="downloadPDF()" class="flex-1 md:flex-none bg-slate-700 hover:bg-slate-600 text-white font-bold py-2.5 px-6 rounded-lg transition-colors border border-slate-500 text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-file-pdf"></i> حفظ كوثيقة
                 </button>
-                <!-- Hidden phone number in text, fully functional in href -->
-                <a href="https://wa.me/201000868667" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-8 rounded-lg shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all flex items-center gap-2">
+                <a href="https://wa.me/201000868667" target="_blank" class="flex-1 md:flex-none bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-8 rounded-lg shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all flex items-center justify-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i> 
-                    <span>تواصل معي عبر واتساب</span>
+                    <span>مناقشة التنفيذ (واتساب)</span>
                 </a>
             </div>
         </div>
@@ -299,8 +305,8 @@
         function downloadPDF() {
             const element = document.getElementById('pitch-document');
             const opt = {
-                margin:       [10, 10, 20, 10], // top, left, bottom, right
-                filename:     'Contract_AI_Pitch_Khalid_Bakhit.pdf',
+                margin:       [10, 10, 20, 10],
+                filename:     'Global_Contract_AI_Architecture_Khalid.pdf',
                 image:        { type: 'jpeg', quality: 0.98 },
                 html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#0f172a' },
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
@@ -317,4 +323,3 @@
     </script>
 </body>
 </html>
-```
